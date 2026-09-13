@@ -1,0 +1,55 @@
+id_seudonimizado,Escenario,tipo_real,score_0,pred_0,score_1,pred_1,score_2,pred_2,score_3,pred_3,score_4,pred_4,score_5,pred_5
+User_3299a54b,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.5084189343854127,1,0.022727272727272728,0,0.1227,0,0.2525,0,0.1753,0,0.2753,0
+User_9b47bd5e,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.5627242812356527,1,0.022727272727272728,0,0.1227,0,0.2688,0,0.1915,0,0.2915,0
+User_f1c0fe65,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.4978948052709349,0,0.022727272727272728,0,0.1227,0,0.2494,0,0.1721,0,0.2721,0
+User_9cdd06e3,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.5006830336375977,1,0.022727272727272728,0,0.1227,0,0.2502,0,0.1729,0,0.2729,0
+User_563842e2,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.5392513176936009,1,0.022727272727272728,0,0.1227,0,0.2618,0,0.1845,0,0.2845,0
+User_ff293375,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.5412492894036787,1,0.022727272727272728,0,0.1227,0,0.2624,0,0.1851,0,0.2851,0
+User_bb0673a8,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.4596139391158702,0,0.022727272727272728,0,0.1227,0,0.2379,0,0.1606,0,0.2606,0
+User_f9b68fbd,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.53391566847222,1,0.022727272727272728,0,0.1227,0,0.2602,0,0.1829,0,0.2829,0
+User_79eab382,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.5598578587001886,1,0.022727272727272728,0,0.1227,0,0.268,0,0.1907,0,0.2907,0
+User_25764948,Caso 1: Granja Clásica de Retuits,Bot Clásico,0.4968173206608633,0,0.022727272727272728,0,0.1227,0,0.249,0,0.1718,0,0.2718,0
+User_40d2644f,Caso 1: Granja Clásica de Retuits,Nodo Central Difusión,0.0301561016412021,0,0.5,1,0.6,1,0.109,0,0.509,1,0.609,1
+User_f705219b,Caso 1: Granja Clásica de Retuits,Humano Orgánico,0.0562537612876528,0,0.022727272727272728,0,0.1227,0,0.1169,0,0.0396,0,0.1396,0
+User_35f14d57,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0282790308773114,0,0.30092592592592593,1,0.4009,1,0.1085,0,0.3094,1,0.4094,1
+User_594f35d0,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0177536420521333,0,0.21875,0,0.3188,0,0.1053,0,0.2241,0,0.3241,0
+User_3a75d1ba,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0206037260393853,0,0.2222222222222222,0,0.3222,0,0.1062,0,0.2284,0,0.3284,0
+User_442df9f7,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0231265091828657,0,0.21875,0,0.3188,0,0.1069,0,0.2257,0,0.3257,0
+User_dc453301,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0370054868522028,0,0.21875,0,0.3188,0,0.1111,0,0.2299,0,0.3299,0
+User_04f40410,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0190812656805976,0,0.24652777777777773,1,0.3465,1,0.1057,0,0.2523,1,0.3523,1
+User_9c1d3493,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0199400950177324,0,0.22337962962962962,0,0.3234,0,0.106,0,0.2294,0,0.3294,0
+User_25a6dafb,Caso 2: Astroturfing Social Bots,Social Bot Avanzado,0.0275881354557966,0,0.22569444444444442,0,0.3257,0,0.1083,0,0.234,0,0.334,0
+User_0be03358,Caso 2: Astroturfing Social Bots,Humano Orgánico,0.0432281457152867,0,0.03125,0,0.1312,0,0.113,0,0.0442,0,0.1442,0
+User_102d9ef1,Caso 2: Astroturfing Social Bots,Humano Orgánico,0.0514154852773597,0,0.0,0,0.1,0,0.1154,0,0.0154,0,0.1154,0
+User_fd931d9e,Caso 3: Polarización Bipartita Puente,Bot Comunidad A,0.1395231530183114,0,0.2948717948717949,1,0.3949,1,0.1419,0,0.3367,1,0.4367,1
+User_dad6e5b7,Caso 3: Polarización Bipartita Puente,Bot Comunidad A,0.1395231530183114,0,0.22115384615384615,0,0.3212,0,0.1419,0,0.263,0,0.363,1
+User_ca7025e9,Caso 3: Polarización Bipartita Puente,Bot Comunidad A,0.1395231530183114,0,0.22115384615384615,0,0.3212,0,0.1419,0,0.263,0,0.363,1
+User_31ea5716,Caso 3: Polarización Bipartita Puente,Bot Comunidad A,0.1395231530183114,0,0.16666666666666666,0,0.2667,0,0.1419,0,0.2085,0,0.3085,0
+User_36160bd8,Caso 3: Polarización Bipartita Puente,Bot Comunidad A,0.1395231530183114,0,0.16666666666666666,0,0.2667,0,0.1419,0,0.2085,0,0.3085,0
+User_ba293bcc,Caso 3: Polarización Bipartita Puente,Bot Comunidad B,0.1356361528120465,0,0.2232905982905983,0,0.3233,0,0.1407,0,0.264,0,0.364,1
+User_aba3021f,Caso 3: Polarización Bipartita Puente,Bot Comunidad B,0.1356361528120465,0,0.2232905982905983,0,0.3233,0,0.1407,0,0.264,0,0.364,1
+User_1b2a747b,Caso 3: Polarización Bipartita Puente,Bot Comunidad B,0.1356361528120465,0,0.2232905982905983,0,0.3233,0,0.1407,0,0.264,0,0.364,1
+User_0e7968bf,Caso 3: Polarización Bipartita Puente,Bot Comunidad B,0.1356361528120465,0,0.16666666666666666,0,0.2667,0,0.1407,0,0.2074,0,0.3074,0
+User_d7796ea2,Caso 3: Polarización Bipartita Puente,Bot Comunidad B,0.1356361528120465,0,0.16666666666666666,0,0.2667,0,0.1407,0,0.2074,0,0.3074,0
+User_02433ff8,Caso 3: Polarización Bipartita Puente,Cabecilla Puente,0.0180279480577838,0,0.34615384615384615,1,0.4462,1,0.1054,0,0.3516,1,0.4516,1
+User_41c1c38b,Caso 3: Polarización Bipartita Puente,Humano Orgánico,0.0433073592074685,0,0.041666666666666664,0,0.1417,0,0.113,0,0.0547,0,0.1547,0
+User_ee800e11,Caso 3: Polarización Bipartita Puente,Humano Orgánico,0.0433073592074685,0,0.0,0,0.1,0,0.113,0,0.013,0,0.113,0
+User_28e40813,Caso 3: Polarización Bipartita Puente,Humano Orgánico,0.0433073592074685,0,0.0,0,0.1,0,0.113,0,0.013,0,0.113,0
+User_bafe9010,Caso 4: Red Zombi Durmiente,Bot Zombi Durmiente,0.4962609923880382,0,0.25,0,0.35,1,0.2489,0,0.3989,1,0.4989,1
+User_86f48589,Caso 4: Red Zombi Durmiente,Bot Zombi Durmiente,0.5216403397148516,1,0.25,0,0.35,1,0.2565,0,0.4065,1,0.5065,1
+User_adf2c408,Caso 4: Red Zombi Durmiente,Bot Zombi Durmiente,0.4818052834760773,0,0.25,0,0.35,1,0.2445,0,0.3945,1,0.4945,1
+User_7a13d163,Caso 4: Red Zombi Durmiente,Bot Zombi Durmiente,0.4275060983792446,0,0.25,0,0.35,1,0.2283,0,0.3783,1,0.4783,1
+User_4ba40017,Caso 4: Red Zombi Durmiente,Bot Zombi Durmiente,0.502216450894529,1,0.25,0,0.35,1,0.2507,0,0.4007,1,0.5007,1
+User_8a2d763f,Caso 4: Red Zombi Durmiente,Humano Orgánico,0.042650590519589,0,0.0,0,0.1,0,0.1128,0,0.0128,0,0.1128,0
+User_42ab688e,Caso 4: Red Zombi Durmiente,Humano Orgánico,0.042650590519589,0,0.0,0,0.1,0,0.1128,0,0.0128,0,0.1128,0
+User_20a4028c,Caso 4: Red Zombi Durmiente,Humano Orgánico,0.042650590519589,0,0.0,0,0.1,0,0.1128,0,0.0128,0,0.1128,0
+User_17f8bf8f,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0326103630468262,0,0.125,0,0.225,0,0.1098,0,0.1348,0,0.2348,0
+User_4feaca9d,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0705966133758665,0,0.2569444444444444,0,0.3569,1,0.1212,0,0.2781,0,0.3781,1
+User_914c4c3f,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0471594885210743,0,0.125,0,0.225,0,0.1141,0,0.1391,0,0.2391,0
+User_66f602c2,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0390749044928213,0,0.125,0,0.225,0,0.1117,0,0.1367,0,0.2367,0
+User_405f7173,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0357337312072858,0,0.125,0,0.225,0,0.1107,0,0.1357,0,0.2357,0
+User_336e01e4,Caso 5: Control Orgánico Humano,Humano Orgánico,0.038713072588251,0,0.125,0,0.225,0,0.1116,0,0.1366,0,0.2366,0
+User_3cae38d5,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0374247356175297,0,0.125,0,0.225,0,0.1112,0,0.1362,0,0.2362,0
+User_a023fd51,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0545828899058827,0,0.0,0,0.1,0,0.1164,0,0.0164,0,0.1164,0
+User_3d198ba6,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0378248314827573,0,0.0,0,0.1,0,0.1113,0,0.0113,0,0.1113,0
+User_d4e96383,Caso 5: Control Orgánico Humano,Humano Orgánico,0.0523338868482091,0,0.0,0,0.1,0,0.1157,0,0.0157,0,0.1157,0

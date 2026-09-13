@@ -1,0 +1,2 @@
+precision,recall,f1,accuracy,roc_auc,pr_auc_trapecios,average_precision,TN,FP,FN,TP,n_train,n_test,train_bots,train_humanos,test_bots,test_humanos,n_estimators,max_depth,random_state,umbral,fecha_utc
+0.7453730204159511,0.2653511751120772,0.3913740419776587,0.757,0.7536332885801529,0.5853381536342258,0.5853659451388028,67887,2669,21631,7813,700000,100000,54586,645414,29444,70556,100,12,42,0.5,2026-09-12T09:37:02.450119+00:00

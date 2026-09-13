@@ -1,0 +1,52 @@
+{
+  "python": "3.14.4",
+  "pandas": "3.0.3",
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "parametros": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": 12,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "variables": [
+    "followers_count",
+    "following_count",
+    "ratio_rep",
+    "tweet_count",
+    "listed_count",
+    "antiguedad_dias",
+    "has_description",
+    "len_description",
+    "has_location",
+    "has_url",
+    "verified",
+    "protected"
+  ],
+  "fecha_referencia_antiguedad": "2022-06-01 UTC",
+  "fechas_ausentes_o_invalidas": 0,
+  "validacion_no_usada_para_ajustes": true,
+  "umbral_fijado_antes_de_test": 0.5,
+  "sha256_entradas_originales": {
+    "user.json": "53faeeb165cea4aa65a19b0b3a37c880e5c33e42d64dca53b273cc3a62f98fcd",
+    "label.csv": "02062e53d1d05128ca554d792a826aa8200c855e294b9520d1697c96b7632efc",
+    "split.csv": "f68c890c824f6f63141ed8228eb412ccb18e127f645761caaf24ed56224c0fd9"
+  },
+  "procedencia_muestra": "54 filas de benchmark_sintetico_con_cohorte.csv; se elimina únicamente username. No se regeneran perfiles ni topologías.",
+  "sha256_csv_origen": "bdf1345acfa29c4883f3b09e617e36713d7468457a79a11f0fbd68484f87bda0"
+}

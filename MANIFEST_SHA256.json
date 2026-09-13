@@ -1,0 +1,21 @@
+{
+  ".gitignore": "b8387b9f79662b85dd849f77d3eefa87dcee6e42086f09aad20121a7f57b735f",
+  "README.md": "55e53f3c7245d92b0bd4c5d8434931a102de626e7e5314b0665ebea6f9db100f",
+  "datos/aristas_sinteticas.csv": "f285a52628a0a7d16c9e275fe8c74e5c33ef0c867b457f04d3cd1ee124c1b00d",
+  "datos/muestras_sinteticas_54.csv": "39f188acccff7555e963a45397e6ad40ce1ca474f7139bc1ca91c1afb8a5121f",
+  "docs/DATOS_Y_METODO.md": "a2d01a88243dcd49ba3b27f8146217000469ea0aceb3cdf33ac24f92d4ef1cf7",
+  "docs/VERIFICACION.md": "cdea7ca85983359320642c94b012bad3e03843d844f0f2f9b3a0c592315fd9ef",
+  "docs/procedencia.json": "6cda54412c61a2ef2cdc392c92414a63da81312cbf1f1825f301c26c7911f850",
+  "requirements.txt": "1fa19fd7046cb4ea6c836efded2693237b5579c6ffc513e8ed09033f53d3387a",
+  "resultados_referencia/classification_report.json": "aee9c5e0cb3a751b293cfdbc39fe800c206be2da93489fc7193af16d7ac1e01c",
+  "resultados_referencia/comparacion_componentes.csv": "8f9ca43889f4b0218e6dfbd4a6a271b6acece67c2928b3a7f5c0ae4cc83aeca4",
+  "resultados_referencia/comparacion_por_escenario.csv": "c40d3bcafcc658b762f64063df02dc4593aa145d216eb26c4909d29b014e5a84",
+  "resultados_referencia/distribucion_particiones.csv": "bcfbb4265902ca075e4e0c78eddd5e8c608eee6a85ead2c7b0165bbdeb52db9d",
+  "resultados_referencia/evaluacion_rf_twibot_test.csv": "08f1d6580be0b9aeaa94246bf26c8bf47cdabad841cc47582a50955ddb5bd754",
+  "resultados_referencia/evaluacion_sintetica_fusion.csv": "a60a9aff88656cbaf4473bab478e5253becedc2b4640371c0ec27a47d3a8f84a",
+  "resultados_referencia/evaluacion_twibot_test.png": "81109492f5f970d981076b3c5e781dc176b614681e8fcab35400c622d3a8f0b4",
+  "resultados_referencia/importancia_variables.csv": "9dd710701d456c54789c97a01473e41f26243ae11d1168726a64807c57a6e672",
+  "resultados_referencia/predicciones_componentes.csv": "9df2c7627e134d9823998337b3a460efddee66e5643998c8e37db00a8753a00a",
+  "scripts/entrenar_twibot.py": "f319fd829ead02213704ff38b77de416b15381f1829e75983420da461d629a60",
+  "scripts/reproducir_sintetico.py": "c2df287a1dab384338cfbf05564a57a216468065cd258a13a3c38dfcc7bb5a1b"
+}

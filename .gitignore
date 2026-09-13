@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+tfm_env/
+.env
+.env.*
+.private/
+salidas/
+datos/crudos/
+*.pkl
+*.joblib
+*.key
+predicciones_twibot_test.csv
+entidades_demostracion_consolidada.csv

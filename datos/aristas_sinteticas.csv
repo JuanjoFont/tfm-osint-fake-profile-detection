@@ -1,0 +1,82 @@
+Escenario,Source,Target,Weight
+Caso 1: Granja Clásica de Retuits,User_3299a54b,User_40d2644f,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_9b47bd5e,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_f1c0fe65,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_9cdd06e3,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_563842e2,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_ff293375,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_bb0673a8,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_f9b68fbd,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_79eab382,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_25764948,3.0
+Caso 1: Granja Clásica de Retuits,User_40d2644f,User_f705219b,1.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_594f35d0,2.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_3a75d1ba,4.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_442df9f7,4.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_dc453301,4.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_04f40410,2.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_9c1d3493,2.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_25a6dafb,4.0
+Caso 2: Astroturfing Social Bots,User_35f14d57,User_0be03358,1.0
+Caso 2: Astroturfing Social Bots,User_594f35d0,User_3a75d1ba,4.0
+Caso 2: Astroturfing Social Bots,User_594f35d0,User_442df9f7,4.0
+Caso 2: Astroturfing Social Bots,User_594f35d0,User_dc453301,4.0
+Caso 2: Astroturfing Social Bots,User_594f35d0,User_04f40410,2.0
+Caso 2: Astroturfing Social Bots,User_594f35d0,User_9c1d3493,4.0
+Caso 2: Astroturfing Social Bots,User_594f35d0,User_25a6dafb,4.0
+Caso 2: Astroturfing Social Bots,User_3a75d1ba,User_dc453301,4.0
+Caso 2: Astroturfing Social Bots,User_3a75d1ba,User_04f40410,2.0
+Caso 2: Astroturfing Social Bots,User_3a75d1ba,User_9c1d3493,4.0
+Caso 2: Astroturfing Social Bots,User_3a75d1ba,User_25a6dafb,4.0
+Caso 2: Astroturfing Social Bots,User_3a75d1ba,User_442df9f7,2.0
+Caso 2: Astroturfing Social Bots,User_442df9f7,User_dc453301,4.0
+Caso 2: Astroturfing Social Bots,User_442df9f7,User_04f40410,4.0
+Caso 2: Astroturfing Social Bots,User_442df9f7,User_9c1d3493,4.0
+Caso 2: Astroturfing Social Bots,User_442df9f7,User_25a6dafb,4.0
+Caso 2: Astroturfing Social Bots,User_dc453301,User_04f40410,4.0
+Caso 2: Astroturfing Social Bots,User_dc453301,User_9c1d3493,4.0
+Caso 2: Astroturfing Social Bots,User_dc453301,User_25a6dafb,2.0
+Caso 2: Astroturfing Social Bots,User_04f40410,User_9c1d3493,2.0
+Caso 2: Astroturfing Social Bots,User_04f40410,User_25a6dafb,2.0
+Caso 2: Astroturfing Social Bots,User_9c1d3493,User_25a6dafb,2.0
+Caso 3: Polarización Bipartita Puente,User_fd931d9e,User_dad6e5b7,4.0
+Caso 3: Polarización Bipartita Puente,User_fd931d9e,User_ca7025e9,4.0
+Caso 3: Polarización Bipartita Puente,User_fd931d9e,User_31ea5716,4.0
+Caso 3: Polarización Bipartita Puente,User_fd931d9e,User_36160bd8,4.0
+Caso 3: Polarización Bipartita Puente,User_fd931d9e,User_02433ff8,3.0
+Caso 3: Polarización Bipartita Puente,User_fd931d9e,User_41c1c38b,1.0
+Caso 3: Polarización Bipartita Puente,User_dad6e5b7,User_ca7025e9,4.0
+Caso 3: Polarización Bipartita Puente,User_dad6e5b7,User_31ea5716,4.0
+Caso 3: Polarización Bipartita Puente,User_dad6e5b7,User_36160bd8,4.0
+Caso 3: Polarización Bipartita Puente,User_dad6e5b7,User_02433ff8,3.0
+Caso 3: Polarización Bipartita Puente,User_ba293bcc,User_aba3021f,4.0
+Caso 3: Polarización Bipartita Puente,User_ba293bcc,User_1b2a747b,4.0
+Caso 3: Polarización Bipartita Puente,User_ba293bcc,User_0e7968bf,4.0
+Caso 3: Polarización Bipartita Puente,User_ba293bcc,User_d7796ea2,4.0
+Caso 3: Polarización Bipartita Puente,User_ba293bcc,User_02433ff8,3.0
+Caso 3: Polarización Bipartita Puente,User_aba3021f,User_1b2a747b,4.0
+Caso 3: Polarización Bipartita Puente,User_aba3021f,User_0e7968bf,4.0
+Caso 3: Polarización Bipartita Puente,User_aba3021f,User_d7796ea2,4.0
+Caso 3: Polarización Bipartita Puente,User_aba3021f,User_02433ff8,3.0
+Caso 3: Polarización Bipartita Puente,User_ca7025e9,User_31ea5716,4.0
+Caso 3: Polarización Bipartita Puente,User_ca7025e9,User_36160bd8,4.0
+Caso 3: Polarización Bipartita Puente,User_ca7025e9,User_02433ff8,3.0
+Caso 3: Polarización Bipartita Puente,User_1b2a747b,User_0e7968bf,4.0
+Caso 3: Polarización Bipartita Puente,User_1b2a747b,User_d7796ea2,4.0
+Caso 3: Polarización Bipartita Puente,User_1b2a747b,User_02433ff8,3.0
+Caso 3: Polarización Bipartita Puente,User_31ea5716,User_36160bd8,4.0
+Caso 3: Polarización Bipartita Puente,User_0e7968bf,User_d7796ea2,4.0
+Caso 4: Red Zombi Durmiente,User_bafe9010,User_86f48589,4.0
+Caso 4: Red Zombi Durmiente,User_bafe9010,User_adf2c408,4.0
+Caso 4: Red Zombi Durmiente,User_bafe9010,User_7a13d163,4.0
+Caso 4: Red Zombi Durmiente,User_bafe9010,User_4ba40017,4.0
+Caso 4: Red Zombi Durmiente,User_86f48589,User_adf2c408,4.0
+Caso 4: Red Zombi Durmiente,User_86f48589,User_7a13d163,4.0
+Caso 4: Red Zombi Durmiente,User_86f48589,User_4ba40017,4.0
+Caso 4: Red Zombi Durmiente,User_adf2c408,User_7a13d163,4.0
+Caso 4: Red Zombi Durmiente,User_adf2c408,User_4ba40017,4.0
+Caso 4: Red Zombi Durmiente,User_7a13d163,User_4ba40017,4.0
+Caso 5: Control Orgánico Humano,User_17f8bf8f,User_4feaca9d,1.0
+Caso 5: Control Orgánico Humano,User_4feaca9d,User_914c4c3f,1.0
+Caso 5: Control Orgánico Humano,User_66f602c2,User_405f7173,1.0
+Caso 5: Control Orgánico Humano,User_336e01e4,User_3cae38d5,1.0

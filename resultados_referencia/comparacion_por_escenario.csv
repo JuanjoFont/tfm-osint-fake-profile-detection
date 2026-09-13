@@ -1,0 +1,31 @@
+variante,escenario,TN,FP,FN,TP
+RF individual (referencia cruzada),Caso 1: Granja Clásica de Retuits,1,0,4,7
+RF individual (referencia cruzada),Caso 2: Astroturfing Social Bots,2,0,8,0
+RF individual (referencia cruzada),Caso 3: Polarización Bipartita Puente,3,0,11,0
+RF individual (referencia cruzada),Caso 4: Red Zombi Durmiente,3,0,3,2
+RF individual (referencia cruzada),Caso 5: Control Orgánico Humano,10,0,0,0
+Red aislada (ablación),Caso 1: Granja Clásica de Retuits,1,0,10,1
+Red aislada (ablación),Caso 2: Astroturfing Social Bots,2,0,6,2
+Red aislada (ablación),Caso 3: Polarización Bipartita Puente,3,0,9,2
+Red aislada (ablación),Caso 4: Red Zombi Durmiente,3,0,5,0
+Red aislada (ablación),Caso 5: Control Orgánico Humano,10,0,0,0
+Fusión sin RF (sin renormalizar),Caso 1: Granja Clásica de Retuits,1,0,10,1
+Fusión sin RF (sin renormalizar),Caso 2: Astroturfing Social Bots,2,0,6,2
+Fusión sin RF (sin renormalizar),Caso 3: Polarización Bipartita Puente,3,0,9,2
+Fusión sin RF (sin renormalizar),Caso 4: Red Zombi Durmiente,3,0,0,5
+Fusión sin RF (sin renormalizar),Caso 5: Control Orgánico Humano,9,1,0,0
+Fusión sin red ni regla puente,Caso 1: Granja Clásica de Retuits,1,0,11,0
+Fusión sin red ni regla puente,Caso 2: Astroturfing Social Bots,2,0,8,0
+Fusión sin red ni regla puente,Caso 3: Polarización Bipartita Puente,3,0,11,0
+Fusión sin red ni regla puente,Caso 4: Red Zombi Durmiente,3,0,5,0
+Fusión sin red ni regla puente,Caso 5: Control Orgánico Humano,10,0,0,0
+Fusión sin auxiliar (sin renormalizar),Caso 1: Granja Clásica de Retuits,1,0,10,1
+Fusión sin auxiliar (sin renormalizar),Caso 2: Astroturfing Social Bots,2,0,6,2
+Fusión sin auxiliar (sin renormalizar),Caso 3: Polarización Bipartita Puente,3,0,9,2
+Fusión sin auxiliar (sin renormalizar),Caso 4: Red Zombi Durmiente,3,0,0,5
+Fusión sin auxiliar (sin renormalizar),Caso 5: Control Orgánico Humano,10,0,0,0
+Fusión completa corregida,Caso 1: Granja Clásica de Retuits,1,0,10,1
+Fusión completa corregida,Caso 2: Astroturfing Social Bots,2,0,6,2
+Fusión completa corregida,Caso 3: Polarización Bipartita Puente,3,0,4,7
+Fusión completa corregida,Caso 4: Red Zombi Durmiente,3,0,0,5
+Fusión completa corregida,Caso 5: Control Orgánico Humano,9,1,0,0
