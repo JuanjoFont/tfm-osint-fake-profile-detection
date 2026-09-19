@@ -1,0 +1,7 @@
+stage,campaign,input_rows,accounts,nodes,edges,wall_seconds,max_rss_kib,scope
+prepare,honduras,1262830,224685,,,35.36,1197800,full curated account aggregation
+prepare,uae,2849468,398974,,,93.57,2236236,full curated account aggregation
+coordination,honduras,1262830,224685,1915,31252,15.12,476096,full retrospective network construction
+coordination,uae,2849468,398974,1877,4086,37.95,732780,full retrospective network construction
+training_and_transfer,both,4112298,623659,,,87.67,589496,two internal models and two cross-campaign evaluations
+real_fusion,both,4112298,623659,3792,35338,37.27,547372,two-signal validation selection and test evaluation

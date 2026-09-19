@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix, average_precision_score
 
+from fusion_real import campaign as verify_fusion_campaign
+
 P = Path(__file__).resolve().parent
 
 
@@ -95,6 +97,15 @@ def main():
         assert set(edges.source) | set(edges.target) == set(nodes.userid)
         assert nodes.label.sum() == graph['positive_nodes']
         checks.append(c+': red, nodos, aristas y etiquetas consistentes')
+    fusion_rows = pd.read_csv(P/'fusion_real_resultados.csv')
+    for c in frames:
+        recalculated = verify_fusion_campaign(c)
+        for signal in ['rf', 'network', 'fusion']:
+            stored = fusion_rows[(fusion_rows.campaign == c) & (fusion_rows.signal == signal)].iloc[0]
+            for key in ['precision', 'recall', 'f1', 'average_precision', 'roc_auc']:
+                assert np.isclose(stored[key], recalculated[signal][key])
+            assert [int(stored[k]) for k in ['tn', 'fp', 'fn', 'tp']] == [recalculated[signal][k] for k in ['tn', 'fp', 'fn', 'tp']]
+        checks.append(c+': fusión real recalculada con calibración en validación y evaluación en test')
     (P/'verificacion.json').write_text(json.dumps({'status': 'passed', 'checks': checks}, indent=2))
     print('\n'.join(checks))
 

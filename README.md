@@ -4,7 +4,7 @@ Código de reproducción de la evaluación revisada del TFM **Identificación de
 
 La configuración de la máquina virtual evaluada y su reconstrucción paso a paso están documentadas en [docs/ENTORNO_VIRTUALBOX.md](docs/ENTORNO_VIRTUALBOX.md).
 
-Se distinguen tres bloques: un Random Forest evaluado en TwiBot-22, una demostración de fusión en cinco escenarios sintéticos y una ampliación con las campañas reales de Honduras y UAE. En estas campañas se evalúan por separado clasificadores de cuenta y grafos exploratorios de coincidencia temporal; no se presenta todavía una fusión real de ambas señales.
+Se distinguen tres bloques: un Random Forest evaluado en TwiBot-22, una demostración de fusión en cinco escenarios sintéticos y una ampliación con las campañas reales de Honduras y UAE. En estas campañas se evalúan clasificadores de cuenta, grafos exploratorios de coincidencia temporal y una fusión retrospectiva de ambas señales calibrada únicamente con la partición de validación.
 
 ## Reproducción rápida sin descargar datos
 
@@ -44,7 +44,7 @@ Tras instalar las dependencias, la reproducción funciona sin red ni claves API.
 
 El RF obtiene ROC-AUC 0,7536 y PR-AUC trapezoidal 0,5853. En el experimento sintético, RF aislado da F1 0,4091 y red aislada 0,2500. Los objetivos son distintos: `bot/human` en TwiBot y rol sintético frente a orgánico en la demostración; no se calcula una métrica conjunta ni se comparan ambas filas como si fueran el mismo problema.
 
-La ampliación Honduras/UAE obtiene F1 interno de 0,9578 y 0,9590. Al transferir los modelos entre campañas, la sensibilidad desciende a 49,57 % y 27,92 %, con F1 de 0,6459 y 0,4318. Consulte [`validacion_campanas/README.md`](validacion_campanas/README.md) para descargar los originales desde Zenodo y ejecutar el protocolo depurado.
+La repetición completa con las versiones fijadas obtiene F1 interno 0,9578 (Honduras) y 0,9588 (UAE); transferencia Honduras → UAE F1 0,6596 y UAE → Honduras F1 0,4914. La fusión real de clasificador y red no mejora el F1 del clasificador: 0,9565 frente a 0,9578 en Honduras; en UAE, la calibración asigna peso cero a la red y conserva 0,9588. Este resultado negativo se mantiene porque muestra el límite real de la señal de coordinación utilizada. Consulte [`validacion_campanas/README.md`](validacion_campanas/README.md) para descargar los originales desde Zenodo y ejecutar el protocolo depurado.
 
 ## Reentrenar con TwiBot-22
 

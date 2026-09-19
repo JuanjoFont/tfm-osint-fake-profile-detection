@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 
@@ -18,13 +19,11 @@ def digest(path):
 
 
 def current():
-    files = (
-        path for path in ROOT.rglob('*')
-        if path.is_file()
-        and '.git' not in path.parts
-        and path != MANIFEST
-        and '__pycache__' not in path.parts
-    )
+    listed = subprocess.run(
+        ['git', 'ls-files', '--cached', '--others', '--exclude-standard'],
+        cwd=ROOT, check=True, text=True, capture_output=True,
+    ).stdout.splitlines()
+    files = (ROOT/path for path in listed if ROOT/path != MANIFEST)
     return {
         path.relative_to(ROOT).as_posix(): digest(path)
         for path in sorted(files)

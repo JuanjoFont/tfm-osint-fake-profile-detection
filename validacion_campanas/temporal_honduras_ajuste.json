@@ -6,6 +6,7 @@
     "duplicate_text_fraction",
     "hour_entropy",
     "max_hour_fraction",
+    "tweets_per_active_day",
     "retweet_fraction",
     "reply_fraction",
     "quote_fraction",
@@ -15,12 +16,11 @@
     "mean_user_mentions",
     "mean_follower_count",
     "mean_following_count",
-    "mean_account_age_days",
-    "tweets_per_active_day"
+    "mean_account_age_days"
   ],
-  "threshold": 0.5069944403631608,
+  "threshold": 0.42676494179746766,
   "seed": 42,
-  "validation_average_precision": 0.9808334330613392,
+  "validation_average_precision": 0.9784329581439676,
   "split_counts": {
     "train": {
       "n": 103948,

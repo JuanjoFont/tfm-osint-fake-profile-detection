@@ -127,14 +127,29 @@ def main():
     for c, g in graphs.items():
         lines.append(f"| {c} | {g['nodes']:,} | {g['edges']:,} | {g['components']:,} | {g['positive_nodes']:,} | {g['reference_nodes']:,} | {100*g['positive_coverage']:.2f}% |")
     lines += ['', '![Grafo Honduras](honduras_grafo.png)', '', '![Grafo UAE](uae_grafo.png)', '',
-              'Las figuras muestran una selección de hasta 150 nodos, priorizando grado y componentes mayores; la red completa está en GraphML y CSV. Los nodos aislados no se incluyen. Los límites de intervalo pueden separar publicaciones cercanas; los textos truncados, el idioma, la popularidad del mensaje y la selección de eventos afectan a la red. No se controló estadísticamente una hipótesis nula de coincidencia ni se ajustó por múltiples comparaciones. Las cifras de cobertura son descriptivas del corpus completo, no métricas de un clasificador probado en un test independiente. No se fusionaron estas señales con el clasificador evaluado.', '',
-              '## 7. Interpretación para la memoria', '',
+              'Las figuras muestran una selección de hasta 150 nodos, priorizando grado y componentes mayores; la red completa está en GraphML y CSV. Los nodos aislados no se incluyen. Los límites de intervalo pueden separar publicaciones cercanas; los textos truncados, el idioma, la popularidad del mensaje y la selección de eventos afectan a la red. No se controló estadísticamente una hipótesis nula de coincidencia ni se ajustó por múltiples comparaciones. Las cifras de cobertura son descriptivas del corpus completo.', '',
+              '## 7. Fusión real y rendimiento observado', '']
+    fusion = pd.read_csv(P/'fusion_real_resultados.csv')
+    lines += ['Se combinan dos señales reales por cuenta: probabilidad del Random Forest y grado normalizado en la red de coincidencia. El peso y el umbral se eligen exclusivamente con validación; test se reserva para la evaluación final. La red se construye sin etiquetas, pero con la ventana completa, por lo que el diseño es retrospectivo y transductivo.', '',
+              '| Campaña | Señal | Precisión | Recall | F1 | AP | ROC-AUC |',
+              '|---|---|---:|---:|---:|---:|---:|']
+    for _, r in fusion.iterrows():
+        lines.append(f"| {r.campaign} | {r.signal} | {r.precision:.4f} | {r.recall:.4f} | {r.f1:.4f} | {r.average_precision:.4f} | {r.roc_auc:.4f} |")
+    lines += ['', 'La fusión no mejora el clasificador aislado. En Honduras reduce ligeramente F1; en UAE la selección de validación asigna peso cero a la red. El resultado negativo impide presentar la coordinación como una mejora general demostrada.', '']
+    performance = pd.read_csv(P/'rendimiento_entorno.csv')
+    lines += ['La medición en la máquina virtual registra tiempos de pared y máximo de memoria residente:', '',
+              '| Etapa | Campaña | Registros | Tiempo (s) | RAM máxima (MiB) |',
+              '|---|---|---:|---:|---:|']
+    for _, r in performance.iterrows():
+        lines.append(f"| {r.stage} | {r.campaign} | {int(r.input_rows):,} | {r.wall_seconds:.2f} | {r.max_rss_kib/1024:.1f} |")
+    lines += ['', 'La preparación y la coordinación crecen al aumentar los registros, pero dos campañas no permiten estimar complejidad asintótica. El coste de la red depende también de eventos repetidos y pares candidatos. Las cuotas y la disponibilidad de APIs externas no forman parte de esta medición.', '',
+              '## 8. Interpretación para la memoria', '',
               'La evaluación aporta evidencia de que una validación aleatoria dentro de una misma campaña puede sobreestimar la utilidad fuera de ese contexto. Se observa buena separación interna y una pérdida de sensibilidad en ambas transferencias con umbrales fijados en origen. La combinación de campañas amplía la representación del entrenamiento, pero su prueba interna no resuelve por sí misma la generalización a nuevas operaciones.', '',
               'Los grafos complementan la clasificación individual con agrupaciones de comportamiento compartido y permiten orientar una revisión OSINT. La etiqueta del corpus debe usarse como referencia experimental, sin equiparar coincidencia temporal, perfil falso, bot y desinformación.', '',
               'Persisten sesgos de recogida entre positivos y referencia, dependencia entre cuentas de una misma operación, diferencias de idioma y cobertura, y ausencia de verificación individual de las cuentas de referencia. Las diferencias de medianas se exportan en medianas_variables.csv; no demuestran por sí solas qué factor causa el cambio de rendimiento.', '',
               'Los JSON incluyen intervalos del 95% por bootstrap estratificado de 2.000 réplicas equivalentes sobre la matriz de confusión para precisión, sensibilidad y F1, con modelo y umbral fijos. No incluyen variabilidad de reentrenamiento ni dependencia entre cuentas. La exactitud de un baseline que siempre responde referencia es 1 − prevalencia y tiene sensibilidad y F1 nulos.', '',
               'El siguiente estudio justificable es reservar una tercera campaña completamente intacta y validar en ella un método fijado con Honduras y UAE, incluyendo selección de señales de coordinación solo con datos de desarrollo. También hace falta una simulación por ventanas cortas y metadatos disponibles en cada momento para sostener una afirmación de alerta temprana.', '',
-              '## 8. Entregables y reproducción', '',
+              '## 9. Entregables y reproducción', '',
               '- resumen_metricas.csv: comparación numérica; *_resultados.json: métricas, errores y umbrales.',
               '- *_modelo.joblib: modelos entrenados; *_predicciones.csv.gz: scores y decisiones por cuenta.',
               '- *_particiones.csv.gz: asignación auditable a entrenamiento, validación y prueba.',
@@ -154,6 +169,7 @@ def main():
               'OMP_NUM_THREADS=3 OPENBLAS_NUM_THREADS=3 .venv/bin/python validacion_campanas/experimentos.py temporal',
               'MPLCONFIGDIR=/tmp/tfm-matplotlib .venv/bin/python validacion_campanas/coordinacion.py honduras --data-dir /ruta/a/zenodo',
               'MPLCONFIGDIR=/tmp/tfm-matplotlib .venv/bin/python validacion_campanas/coordinacion.py uae --data-dir /ruta/a/zenodo',
+              '.venv/bin/python validacion_campanas/fusion_real.py',
               'MPLCONFIGDIR=/tmp/tfm-matplotlib .venv/bin/python validacion_campanas/informe.py',
               '.venv/bin/python validacion_campanas/verificar.py',
               '```', '',

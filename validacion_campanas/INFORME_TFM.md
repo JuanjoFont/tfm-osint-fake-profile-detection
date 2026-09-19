@@ -4,7 +4,7 @@ Ejecución local: 18 de septiembre de 2026. Todos los resultados proceden de los
 
 **Conclusión:** el clasificador funciona bien dentro de cada campaña, pero su sensibilidad disminuye al aplicarlo a una campaña distinta con el umbral fijado en origen. Se ha realizado una validación externa entre dos campañas; no se ha demostrado un detector universal de perfiles falsos.
 
-En la comparación depurada Honduras → UAE se detectaron 987 de 1991 cuentas positivas (sensibilidad 49.57%), con 78 falsos positivos. En UAE → Honduras se detectaron 521 de 1866 (27.92%), con 26 falsos positivos.
+En la comparación depurada Honduras → UAE se detectaron 1020 de 1991 cuentas positivas (sensibilidad 51.23%), con 82 falsos positivos. En UAE → Honduras se detectaron 625 de 1866 (33.49%), con 53 falsos positivos.
 
 ## 1. Procedencia y significado de las etiquetas
 
@@ -31,10 +31,10 @@ Las 17 variables describen actividad, repetición, uso de entidades y metadatos 
 
 | Experimento | Cuentas | Positivas | Precisión | Sensibilidad | F1 | AP | FP | FN |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Honduras → Honduras (interno) | 44,937 | 373 | 94.29% | 97.32% | 0.9578 | 0.9900 | 22 | 10 |
-| UAE → UAE (interno) | 79,795 | 398 | 97.91% | 93.97% | 0.9590 | 0.9874 | 8 | 24 |
-| Honduras → UAE (externo) | 398,582 | 1,991 | 92.68% | 49.57% | 0.6459 | 0.7814 | 78 | 1004 |
-| UAE → Honduras (externo) | 224,293 | 1,866 | 95.25% | 27.92% | 0.4318 | 0.8281 | 26 | 1345 |
+| Honduras → Honduras (interno) | 44,937 | 373 | 94.29% | 97.32% | 0.9578 | 0.9910 | 22 | 10 |
+| UAE → UAE (interno) | 79,795 | 398 | 95.29% | 96.48% | 0.9588 | 0.9872 | 19 | 14 |
+| Honduras → UAE (externo) | 398,582 | 1,991 | 92.56% | 51.23% | 0.6596 | 0.7974 | 82 | 971 |
+| UAE → Honduras (externo) | 224,293 | 1,866 | 92.18% | 33.49% | 0.4914 | 0.8191 | 53 | 1241 |
 
 Los tests internos usan el 20% reservado; las transferencias usan todas las cuentas del destino excepto las compartidas. Son poblaciones y prevalencias diferentes: la comparación no es un ensayo pareado con idénticos sujetos.
 
@@ -48,7 +48,7 @@ Se utiliza una única partición por experimento. Cambiar el número de cuentas 
 
 ### Comprobación del modelo original congelado
 
-El modelo de la primera ejecución, conservado sin modificar, obtuvo sobre UAE depurado precisión 95.79%, sensibilidad 21.70% y F1 0.3538: 432 detectadas, 1559 no detectadas y 19 falsos positivos. La conclusión de pérdida de sensibilidad no depende solo del reentrenamiento tras corregir la limpieza.
+La comparación con el modelo histórico se omite cuando los artefactos privados de entrenamiento_honduras no están disponibles. No interviene en las métricas depuradas principales.
 
 ## 4. Entrenamiento combinado
 
@@ -56,9 +56,9 @@ Se mezclan las cuentas de ambas campañas y se estratifica por campaña y etique
 
 | Experimento | Cuentas | Positivas | Precisión | Sensibilidad | F1 | AP | FP | FN |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Modelo conjunto: prueba global | 124,575 | 771 | 97.78% | 91.31% | 0.9443 | 0.9852 | 16 | 67 |
-| Modelo conjunto: prueba Honduras | 44,859 | 373 | 97.92% | 88.47% | 0.9296 | 0.9780 | 7 | 43 |
-| Modelo conjunto: prueba UAE | 79,716 | 398 | 97.65% | 93.97% | 0.9577 | 0.9921 | 9 | 24 |
+| Modelo conjunto: prueba global | 124,575 | 771 | 97.78% | 91.44% | 0.9450 | 0.9846 | 16 | 66 |
+| Modelo conjunto: prueba Honduras | 44,859 | 373 | 97.93% | 88.74% | 0.9311 | 0.9781 | 7 | 42 |
+| Modelo conjunto: prueba UAE | 79,716 | 398 | 97.65% | 93.97% | 0.9577 | 0.9911 | 9 | 24 |
 
 ## 5. Evaluación temporal
 
@@ -66,8 +66,8 @@ Se recalculan las variables separadamente antes y después de los cortes 2019-11
 
 | Experimento | Cuentas | Positivas | Precisión | Sensibilidad | F1 | AP | FP | FN |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Temporal Honduras: cuentas nuevas | 94,749 | 667 | 96.31% | 86.06% | 0.9089 | 0.9560 | 22 | 93 |
-| Temporal UAE: cuentas nuevas | 154,868 | 9 | 36.36% | 88.89% | 0.5161 | 0.8899 | 14 | 1 |
+| Temporal Honduras: cuentas nuevas | 94,749 | 667 | 94.63% | 87.11% | 0.9071 | 0.9567 | 33 | 86 |
+| Temporal UAE: cuentas nuevas | 154,868 | 9 | 36.36% | 88.89% | 0.5161 | 0.8919 | 14 | 1 |
 
 HONDURAS: 129,936 cuentas iniciales; 148,133 posteriores; 53,384 posteriores excluidas por haber aparecido antes; 94,749 nuevas, con 667 positivas.
 
@@ -89,9 +89,37 @@ Se conecta una pareja cuando comparte al menos tres textos idénticos diferentes
 
 ![Grafo UAE](uae_grafo.png)
 
-Las figuras muestran una selección de hasta 150 nodos, priorizando grado y componentes mayores; la red completa está en GraphML y CSV. Los nodos aislados no se incluyen. Los límites de intervalo pueden separar publicaciones cercanas; los textos truncados, el idioma, la popularidad del mensaje y la selección de eventos afectan a la red. No se controló estadísticamente una hipótesis nula de coincidencia ni se ajustó por múltiples comparaciones. Las cifras de cobertura son descriptivas del corpus completo, no métricas de un clasificador probado en un test independiente. No se fusionaron estas señales con el clasificador evaluado.
+Las figuras muestran una selección de hasta 150 nodos, priorizando grado y componentes mayores; la red completa está en GraphML y CSV. Los nodos aislados no se incluyen. Los límites de intervalo pueden separar publicaciones cercanas; los textos truncados, el idioma, la popularidad del mensaje y la selección de eventos afectan a la red. No se controló estadísticamente una hipótesis nula de coincidencia ni se ajustó por múltiples comparaciones. Las cifras de cobertura son descriptivas del corpus completo.
 
-## 7. Interpretación para la memoria
+## 7. Fusión real y rendimiento observado
+
+Se combinan dos señales reales por cuenta: probabilidad del Random Forest y grado normalizado en la red de coincidencia. El peso y el umbral se eligen exclusivamente con validación; test se reserva para la evaluación final. La red se construye sin etiquetas, pero con la ventana completa, por lo que el diseño es retrospectivo y transductivo.
+
+| Campaña | Señal | Precisión | Recall | F1 | AP | ROC-AUC |
+|---|---|---:|---:|---:|---:|---:|
+| honduras | rf | 0.9429 | 0.9732 | 0.9578 | 0.9910 | 0.9999 |
+| honduras | network | 0.9676 | 0.7212 | 0.8264 | 0.7486 | 0.8764 |
+| honduras | fusion | 0.9404 | 0.9732 | 0.9565 | 0.9899 | 0.9998 |
+| uae | rf | 0.9529 | 0.9648 | 0.9588 | 0.9872 | 0.9986 |
+| uae | network | 0.5150 | 0.4749 | 0.4941 | 0.2971 | 0.7365 |
+| uae | fusion | 0.9529 | 0.9648 | 0.9588 | 0.9872 | 0.9986 |
+
+La fusión no mejora el clasificador aislado. En Honduras reduce ligeramente F1; en UAE la selección de validación asigna peso cero a la red. El resultado negativo impide presentar la coordinación como una mejora general demostrada.
+
+La medición en la máquina virtual registra tiempos de pared y máximo de memoria residente:
+
+| Etapa | Campaña | Registros | Tiempo (s) | RAM máxima (MiB) |
+|---|---|---:|---:|---:|
+| prepare | honduras | 1,262,830 | 35.36 | 1169.7 |
+| prepare | uae | 2,849,468 | 93.57 | 2183.8 |
+| coordination | honduras | 1,262,830 | 15.12 | 464.9 |
+| coordination | uae | 2,849,468 | 37.95 | 715.6 |
+| training_and_transfer | both | 4,112,298 | 87.67 | 575.7 |
+| real_fusion | both | 4,112,298 | 37.27 | 534.5 |
+
+La preparación y la coordinación crecen al aumentar los registros, pero dos campañas no permiten estimar complejidad asintótica. El coste de la red depende también de eventos repetidos y pares candidatos. Las cuotas y la disponibilidad de APIs externas no forman parte de esta medición.
+
+## 8. Interpretación para la memoria
 
 La evaluación aporta evidencia de que una validación aleatoria dentro de una misma campaña puede sobreestimar la utilidad fuera de ese contexto. Se observa buena separación interna y una pérdida de sensibilidad en ambas transferencias con umbrales fijados en origen. La combinación de campañas amplía la representación del entrenamiento, pero su prueba interna no resuelve por sí misma la generalización a nuevas operaciones.
 
@@ -103,7 +131,7 @@ Los JSON incluyen intervalos del 95% por bootstrap estratificado de 2.000 répli
 
 El siguiente estudio justificable es reservar una tercera campaña completamente intacta y validar en ella un método fijado con Honduras y UAE, incluyendo selección de señales de coordinación solo con datos de desarrollo. También hace falta una simulación por ventanas cortas y metadatos disponibles en cada momento para sostener una afirmación de alerta temprana.
 
-## 8. Entregables y reproducción
+## 9. Entregables y reproducción
 
 - resumen_metricas.csv: comparación numérica; *_resultados.json: métricas, errores y umbrales.
 - *_modelo.joblib: modelos entrenados; *_predicciones.csv.gz: scores y decisiones por cuenta.
@@ -127,6 +155,7 @@ OMP_NUM_THREADS=3 OPENBLAS_NUM_THREADS=3 .venv/bin/python validacion_campanas/ex
 OMP_NUM_THREADS=3 OPENBLAS_NUM_THREADS=3 .venv/bin/python validacion_campanas/experimentos.py temporal
 MPLCONFIGDIR=/tmp/tfm-matplotlib .venv/bin/python validacion_campanas/coordinacion.py honduras --data-dir /ruta/a/zenodo
 MPLCONFIGDIR=/tmp/tfm-matplotlib .venv/bin/python validacion_campanas/coordinacion.py uae --data-dir /ruta/a/zenodo
+.venv/bin/python validacion_campanas/fusion_real.py
 MPLCONFIGDIR=/tmp/tfm-matplotlib .venv/bin/python validacion_campanas/informe.py
 .venv/bin/python validacion_campanas/verificar.py
 ```
