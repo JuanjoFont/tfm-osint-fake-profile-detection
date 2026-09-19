@@ -1,0 +1,38 @@
+{
+  "features": [
+    "tweet_count",
+    "active_days",
+    "span_days",
+    "duplicate_text_fraction",
+    "hour_entropy",
+    "max_hour_fraction",
+    "retweet_fraction",
+    "reply_fraction",
+    "quote_fraction",
+    "mean_text_length",
+    "mean_hashtags",
+    "mean_urls",
+    "mean_user_mentions",
+    "mean_follower_count",
+    "mean_following_count",
+    "mean_account_age_days",
+    "tweets_per_active_day"
+  ],
+  "threshold": 0.37680815597392703,
+  "seed": 42,
+  "validation_average_precision": 0.9843626951540931,
+  "split_counts": {
+    "train": {
+      "n": 134811,
+      "positives": 1120
+    },
+    "validation": {
+      "n": 44937,
+      "positives": 373
+    },
+    "test": {
+      "n": 44937,
+      "positives": 373
+    }
+  }
+}

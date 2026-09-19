@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Si utiliza este código, cite este repositorio y la memoria del TFM."
+title: "Identificación de perfiles falsos y campañas de desinformación mediante técnicas OSINT"
+type: software
+authors:
+  - family-names: "Font Picazo"
+    given-names: "Juan José"
+repository-code: "https://github.com/JuanjoFont/tfm-osint-fake-profile-detection"
+version: "1.1.0"
+date-released: "2026-09-19"

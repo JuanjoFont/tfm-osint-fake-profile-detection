@@ -12,3 +12,14 @@ datos/crudos/
 *.key
 predicciones_twibot_test.csv
 entidades_demostracion_consolidada.csv
+validacion_campanas/*_curado.csv.gz
+validacion_campanas/*_early.csv.gz
+validacion_campanas/*_late.csv.gz
+validacion_campanas/*_cuentas.csv.gz
+validacion_campanas/*_predicciones.csv.gz
+validacion_campanas/*_particiones.csv.gz
+validacion_campanas/*_aristas.csv.gz
+validacion_campanas/*_nodos.csv.gz
+validacion_campanas/*.graphml.gz
+validacion_campanas/*.log
+validacion_campanas/*-anonymized

@@ -1,8 +1,8 @@
-# TFM: detección de cuentas y demostración de coordinación
+# TFM: detección de cuentas y análisis de coordinación
 
 Código de reproducción de la evaluación revisada del TFM **Identificación de perfiles falsos y campañas de desinformación mediante técnicas OSINT**.
 
-Se distinguen dos experimentos: un Random Forest evaluado en cuentas reales de test de TwiBot-22 y una demostración de fusión en cinco escenarios sintéticos. La segunda no valida la detección de campañas reales.
+Se distinguen tres bloques: un Random Forest evaluado en TwiBot-22, una demostración de fusión en cinco escenarios sintéticos y una ampliación con las campañas reales de Honduras y UAE. En estas campañas se evalúan por separado clasificadores de cuenta y grafos exploratorios de coincidencia temporal; no se presenta todavía una fusión real de ambas señales.
 
 ## Reproducción rápida sin descargar datos
 
@@ -30,6 +30,7 @@ Tras instalar las dependencias, la reproducción funciona sin red ni claves API.
 | `resultados_referencia/` | Métricas agregadas reales, resultados sintéticos y figura de evaluación |
 | `docs/DATOS_Y_METODO.md` | Diccionario, procedencia y límites |
 | `docs/procedencia.json` | Versiones, parámetros y hashes de entradas originales |
+| `validacion_campanas/` | Código, protocolo, métricas agregadas y figuras de Honduras/UAE |
 | `MANIFEST_SHA256.json` | Integridad de los archivos entregados |
 
 ## Resultados esperados
@@ -40,6 +41,8 @@ Tras instalar las dependencias, la reproducción funciona sin red ni claves API.
 | Fusión, escenarios sintéticos | 54 | 0,9375 | 0,4286 | 0,5882 | 18 / 1 / 20 / 15 |
 
 El RF obtiene ROC-AUC 0,7536 y PR-AUC trapezoidal 0,5853. En el experimento sintético, RF aislado da F1 0,4091 y red aislada 0,2500. Los objetivos son distintos: `bot/human` en TwiBot y rol sintético frente a orgánico en la demostración; no se calcula una métrica conjunta ni se comparan ambas filas como si fueran el mismo problema.
+
+La ampliación Honduras/UAE obtiene F1 interno de 0,9578 y 0,9590. Al transferir los modelos entre campañas, la sensibilidad desciende a 49,57 % y 27,92 %, con F1 de 0,6459 y 0,4318. Consulte [`validacion_campanas/README.md`](validacion_campanas/README.md) para descargar los originales desde Zenodo y ejecutar el protocolo depurado.
 
 ## Reentrenar con TwiBot-22
 
@@ -58,8 +61,8 @@ Se generan métricas, curvas, importancias, modelo, predicciones individuales y 
 
 ## Alcance y publicación
 
-Las muestras sintéticas son las usadas, no ejemplos nuevos generados con otra semilla. Las aristas y metadatos son ficticios. No se atribuyen sus etiquetas a personas reales. TwiBot sí contiene datos reales, pero su evaluación por cuenta no demuestra detección de una campaña real. No se consiguió una evaluación externa de campaña con metadatos compatibles y etiquetas independientes: OSF no aportaba conjuntamente esos requisitos y los intentos de acceso a otros datos no culminaron en un conjunto utilizable.
+Las muestras sintéticas son las usadas, no ejemplos nuevos generados con otra semilla. Las aristas y metadatos son ficticios. No se atribuyen sus etiquetas a personas reales. TwiBot contiene datos reales, pero su tarea es `bot/human`. Honduras y UAE permiten estudiar pertenencia a operaciones documentadas y transferencia entre contextos; sus etiquetas no certifican individualmente que una cuenta sea falsa, automatizada o responsable de desinformación.
 
 El auxiliar denominado `score_botometer` vale 0,5 para todas las filas: no es una respuesta de Botometer. No se utiliza `tipo_real` para generar scores. Las ablaciones mantienen los pesos restantes y los umbrales, por lo que también cambia la escala. No permiten atribuir causalmente una ganancia a un componente.
 
-Suba **solo esta carpeta**, no la carpeta completa del TFM. El paquete no incluye credenciales, datos crudos de terceros, predicciones de cuentas reales ni modelos serializados. No se ha creado ningún repositorio remoto. No se asigna automáticamente una licencia a la obra; el titular puede añadir la licencia de distribución que elija. Las dependencias conservan sus propias licencias.
+El paquete no incluye credenciales, datos crudos de terceros, identificadores del corpus, predicciones por cuenta, particiones ni modelos serializados. Antes de publicar, el titular debe elegir una licencia para el código. Las dependencias y los conjuntos de terceros conservan sus propias licencias y condiciones de uso.

@@ -1,0 +1,34 @@
+{
+  "bad": {
+    "rows": 387338,
+    "duplicates_removed": 0,
+    "outside_window_excluded": 0,
+    "tweetid_collisions_preserved": 0,
+    "md5": "c216b78629796fd38c08a455625c7d88",
+    "sha256": "ed49eef87ca6ba5c9eab06a14d8bd359c8fdc3044f931965e45421a2dccf5adb",
+    "matches_zenodo": true,
+    "first_utc": "2019-01-26T16:16:00+00:00",
+    "last_utc": "2019-05-26T16:15:00+00:00"
+  },
+  "good": {
+    "rows": 2462130,
+    "duplicates_removed": 99564,
+    "outside_window_excluded": 247,
+    "tweetid_collisions_preserved": 3636,
+    "md5": "ce0f005ad71c13b44f2da064f3332de9",
+    "sha256": "01b64d91f1b7db1c7c9ac9558efdd60d6320b57aa59a9297d39f8b7a84ef0ae9",
+    "matches_zenodo": true,
+    "first_utc": "2011-08-17T22:29:00+00:00",
+    "last_utc": "2019-05-26T23:59:00+00:00"
+  },
+  "full": {
+    "accounts": 398974,
+    "positives": 1991,
+    "tweets": 2749657
+  },
+  "window_utc_inclusive_exclusive": [
+    "2019-01-26",
+    "2019-05-27"
+  ],
+  "conflicting_users_excluded": []
+}

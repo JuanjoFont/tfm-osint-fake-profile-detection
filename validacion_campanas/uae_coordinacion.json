@@ -1,0 +1,80 @@
+{
+  "rows_scanned": 2849468,
+  "outside_window_rows": 511,
+  "short_text_rows": 28440,
+  "time_bin_seconds": 60,
+  "min_distinct_texts": 3,
+  "max_users_per_event": 50,
+  "unique_events": 2411389,
+  "oversized_events_excluded": 4,
+  "candidate_pairs": 682920,
+  "nodes": 1877,
+  "edges": 4086,
+  "components": 315,
+  "positive_nodes": 920,
+  "reference_nodes": 957,
+  "positive_fraction_among_nodes": 0.49014384656366544,
+  "positive_coverage": 0.4620793571069814,
+  "largest_components": [
+    {
+      "component": 1,
+      "accounts": 616,
+      "positive_accounts": 369,
+      "edges": 1852
+    },
+    {
+      "component": 2,
+      "accounts": 48,
+      "positive_accounts": 0,
+      "edges": 61
+    },
+    {
+      "component": 3,
+      "accounts": 47,
+      "positive_accounts": 0,
+      "edges": 55
+    },
+    {
+      "component": 4,
+      "accounts": 32,
+      "positive_accounts": 32,
+      "edges": 74
+    },
+    {
+      "component": 5,
+      "accounts": 26,
+      "positive_accounts": 26,
+      "edges": 107
+    },
+    {
+      "component": 6,
+      "accounts": 26,
+      "positive_accounts": 26,
+      "edges": 35
+    },
+    {
+      "component": 7,
+      "accounts": 26,
+      "positive_accounts": 26,
+      "edges": 132
+    },
+    {
+      "component": 8,
+      "accounts": 25,
+      "positive_accounts": 25,
+      "edges": 176
+    },
+    {
+      "component": 9,
+      "accounts": 25,
+      "positive_accounts": 25,
+      "edges": 50
+    },
+    {
+      "component": 10,
+      "accounts": 24,
+      "positive_accounts": 24,
+      "edges": 89
+    }
+  ]
+}

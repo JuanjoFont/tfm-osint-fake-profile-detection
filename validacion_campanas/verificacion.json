@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": [
+    "honduras: recuentos, etiquetas, unicidad, ausencia de nulos y conservaci\u00f3n temporal correctos",
+    "uae: recuentos, etiquetas, unicidad, ausencia de nulos y conservaci\u00f3n temporal correctos",
+    "uae_particiones.csv.gz: ninguna cuenta compartida entre particiones",
+    "honduras_curado_particiones.csv.gz: ninguna cuenta compartida entre particiones",
+    "temporal_uae_particiones.csv.gz: ninguna cuenta compartida entre particiones",
+    "conjunto_particiones.csv.gz: ninguna cuenta compartida entre particiones",
+    "temporal_honduras_particiones.csv.gz: ninguna cuenta compartida entre particiones",
+    "uae_curado_particiones.csv.gz: ninguna cuenta compartida entre particiones",
+    "honduras_curado_interno: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "uae_curado_interno: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "honduras_curado_a_uae: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "uae_curado_a_honduras: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "conjunto_global: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "conjunto_honduras: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "conjunto_uae: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "temporal_honduras: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "temporal_uae: m\u00e9tricas recalculadas y 2.000 scores reproducidos con el modelo recargado",
+    "honduras: red, nodos, aristas y etiquetas consistentes",
+    "uae: red, nodos, aristas y etiquetas consistentes"
+  ]
+}

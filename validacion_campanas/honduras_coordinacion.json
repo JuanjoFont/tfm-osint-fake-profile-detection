@@ -1,0 +1,80 @@
+{
+  "rows_scanned": 1262830,
+  "outside_window_rows": 0,
+  "short_text_rows": 10496,
+  "time_bin_seconds": 60,
+  "min_distinct_texts": 3,
+  "max_users_per_event": 50,
+  "unique_events": 1009835,
+  "oversized_events_excluded": 91,
+  "candidate_pairs": 485316,
+  "nodes": 1915,
+  "edges": 31252,
+  "components": 217,
+  "positive_nodes": 1400,
+  "reference_nodes": 515,
+  "positive_fraction_among_nodes": 0.7310704960835509,
+  "positive_coverage": 0.7502679528403001,
+  "largest_components": [
+    {
+      "component": 1,
+      "accounts": 717,
+      "positive_accounts": 693,
+      "edges": 20033
+    },
+    {
+      "component": 2,
+      "accounts": 175,
+      "positive_accounts": 175,
+      "edges": 5668
+    },
+    {
+      "component": 3,
+      "accounts": 102,
+      "positive_accounts": 102,
+      "edges": 1495
+    },
+    {
+      "component": 4,
+      "accounts": 95,
+      "positive_accounts": 94,
+      "edges": 517
+    },
+    {
+      "component": 5,
+      "accounts": 74,
+      "positive_accounts": 74,
+      "edges": 912
+    },
+    {
+      "component": 6,
+      "accounts": 56,
+      "positive_accounts": 54,
+      "edges": 523
+    },
+    {
+      "component": 7,
+      "accounts": 26,
+      "positive_accounts": 26,
+      "edges": 291
+    },
+    {
+      "component": 8,
+      "accounts": 25,
+      "positive_accounts": 25,
+      "edges": 275
+    },
+    {
+      "component": 9,
+      "accounts": 25,
+      "positive_accounts": 25,
+      "edges": 285
+    },
+    {
+      "component": 10,
+      "accounts": 25,
+      "positive_accounts": 25,
+      "edges": 281
+    }
+  ]
+}

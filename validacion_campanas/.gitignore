@@ -1,0 +1,13 @@
+*-anonymized
+*_curado.csv.gz
+*_early.csv.gz
+*_late.csv.gz
+*_cuentas.csv.gz
+*_predicciones.csv.gz
+*_particiones.csv.gz
+*_modelo.joblib
+*_aristas.csv.gz
+*_nodos.csv.gz
+*_coordinacion.graphml.gz
+*.log
+__pycache__/
