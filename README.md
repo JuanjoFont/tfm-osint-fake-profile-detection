@@ -2,6 +2,8 @@
 
 Código de reproducción de la evaluación revisada del TFM **Identificación de perfiles falsos y campañas de desinformación mediante técnicas OSINT**.
 
+La configuración de la máquina virtual evaluada y su reconstrucción paso a paso están documentadas en [docs/ENTORNO_VIRTUALBOX.md](docs/ENTORNO_VIRTUALBOX.md).
+
 Se distinguen tres bloques: un Random Forest evaluado en TwiBot-22, una demostración de fusión en cinco escenarios sintéticos y una ampliación con las campañas reales de Honduras y UAE. En estas campañas se evalúan por separado clasificadores de cuenta y grafos exploratorios de coincidencia temporal; no se presenta todavía una fusión real de ambas señales.
 
 ## Reproducción rápida sin descargar datos

@@ -7,4 +7,6 @@
 - Se ejecutó el entrenamiento portátil completo con un conjunto ficticio de prueba de 80 cuentas, separado en 40 train, 20 val y 20 test. Se comprobaron las exportaciones de 54 entidades sintéticas, 20 predicciones test, métricas y manifiesto. Es una prueba funcional del programa, no un nuevo resultado científico; esas cuentas de prueba no se distribuyen como muestras del TFM.
 - Se verificó la sintaxis de los dos scripts y la ejecución sin modelo desde el paquete.
 
-No se repitió el entrenamiento de un millón de cuentas al preparar este entregable, ni se probó una instalación limpia descargando nuevamente todas las dependencias. Las comprobaciones se ejecutaron con las versiones fijadas en el entorno existente. Los resultados reales de referencia corresponden a la ejecución original.
+Se verificó una reconstrucción limpia del entorno Python 3.14.4: se creó un entorno virtual nuevo, se instalaron de nuevo las dependencias fijadas en `requirements.txt`, el manifiesto de 65 archivos se validó y `scripts/reproducir_sintetico.py` reprodujo las 54 muestras, 81 aristas y seis variantes de referencia. La guía completa de la máquina virtual está en [ENTORNO_VIRTUALBOX.md](ENTORNO_VIRTUALBOX.md).
+
+No se repitió el entrenamiento de un millón de cuentas ni se descargaron los cuatro originales de Honduras/UAE durante esa comprobación limpia. Los resultados reales de referencia corresponden a la ejecución original; repetirlos requiere los datos de terceros y seguir `validacion_campanas/README.md`.
